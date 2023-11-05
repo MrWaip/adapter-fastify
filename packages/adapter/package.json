@@ -1,6 +1,6 @@
 {
 	"name": "@mrwaip/adapter-fastify",
-	"version": "0.0.0",
+	"version": "0.0.1-next.0",
 	"description": "Adapter for SvelteKit apps that generates a standalone Fastify server",
 	"license": "MIT",
 	"type": "module",

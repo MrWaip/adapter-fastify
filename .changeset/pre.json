@@ -2,7 +2,11 @@
   "mode": "pre",
   "tag": "next",
   "initialVersions": {
-    "@mrwaip/adapter-fastify": "0.0.0"
+    "@mrwaip/adapter-fastify": "0.0.0",
+    "@e2e/default": "0.0.1"
   },
-  "changesets": []
+  "changesets": [
+    "cuddly-crabs-sneeze",
+    "old-fireants-serve"
+  ]
 }
