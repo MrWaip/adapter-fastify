@@ -17,4 +17,4 @@ export default {
 
 ## Other
 
-All concepts are same like with [@sveltejs/adapter-node](https://kit.svelte.dev/docs/adapter-node) 
+All concepts are same like with [@sveltejs/adapter-node](https://kit.svelte.dev/docs/adapter-node)
