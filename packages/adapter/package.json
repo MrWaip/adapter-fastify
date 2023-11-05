@@ -1,0 +1,42 @@
+{
+	"name": "@mrwaip/adapter-fastify",
+	"version": "0.0.0",
+	"description": "Adapter for SvelteKit apps that generates a standalone Fastify server",
+	"license": "MIT",
+	"type": "module",
+	"exports": {
+		".": {
+			"types": "./dist/index.d.ts",
+			"import": "./dist/index.js"
+		},
+		"./package.json": "./package.json"
+	},
+	"types": "./dist/index.d.ts",
+	"files": [
+		"dist"
+	],
+	"scripts": {
+		"build": "node -e \"fs.rmSync('dist', { force: true, recursive: true })\" && rollup -c",
+		"check": "tsc",
+		"lint": "prettier --check . --config ../../.prettierrc --ignore-path .gitignore",
+		"lint:fix": "pnpm lint --write"
+	},
+	"devDependencies": {
+		"@types/node": "^20.0.0",
+		"typescript": "^5.0.0",
+		"rollup-plugin-dts": "^6.0.0",
+		"rollup-plugin-esbuild": "^6.0.0"
+	},
+	"dependencies": {
+		"@fastify/static": "^6.0.0",
+		"fastify": "^4.0.3",
+		"fastify-plugin": "^4.0.0",
+		"rollup": "^4.0.0",
+		"@rollup/plugin-commonjs": "^25.0.0",
+		"@rollup/plugin-json": "^6.0.0",
+		"@rollup/plugin-node-resolve": "^15.0.0"
+	},
+	"peerDependencies": {
+		"@sveltejs/kit": "^1.0.0"
+	}
+}
