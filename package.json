@@ -8,10 +8,12 @@
     "check": "pnpm -r --filter=./packages/* run check",
     "lint": "pnpm -r --filter=./packages/* run lint",
     "lint:fix": "pnpm -r --filter=./packages/* run lint:fix",
-    "test": "pnpm -r --filter=./packages/* run test"
+    "test": "pnpm -r --filter=./packages/* run test",
+    "version": "pnpm changeset version"
   },
   "devDependencies": {
-    "prettier": "^3.0.3",
-    "undici": "^5.27.2"
+    "@changesets/cli": "^2.26.0",
+    "prettier": "^3.0.0",
+    "undici": "^5.0.0"
   }
 }

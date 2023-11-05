@@ -1,9 +1,8 @@
-import { builtinModules } from 'node:module';
-
+import { builtinModules } from 'module';
 import { dts } from 'rollup-plugin-dts';
 import esbuild from 'rollup-plugin-esbuild';
 
-const external = ['ENV', 'HANDLER', 'MANIFEST', 'SERVER', 'SHIMS', ...builtinModules];
+const external = ['ENV', 'PLUGIN', 'MANIFEST', 'SERVER', 'SHIMS', /node/, /rollup/, /fastify/, ...builtinModules];
 
 const input = {
 	index: 'src/index.ts',

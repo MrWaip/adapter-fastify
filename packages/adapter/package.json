@@ -12,37 +12,33 @@
 	"type": "module",
 	"exports": {
 		".": {
-			"types": "./index.d.ts",
-			"import": "./index.js"
+			"types": "./dist/index.d.ts",
+			"import": "./dist/index.js"
 		},
 		"./package.json": "./package.json"
 	},
-	"types": "index.d.ts",
+	"types": "./dist/index.d.ts",
 	"files": [
 		"dist"
 	],
 	"scripts": {
-		"build": "node -e \"fs.rmSync('files', { force: true, recursive: true })\" && rollup -c",
+		"build": "node -e \"fs.rmSync('dist', { force: true, recursive: true })\" && rollup -c",
 		"check": "tsc",
 		"lint": "prettier --check . --config ../../.prettierrc --ignore-path .gitignore",
 		"lint:fix": "pnpm lint --write"
 	},
 	"devDependencies": {
-		"@playwright/test": "^1.39.0",
-		"@types/node": "^20.8.10",
-		"typescript": "^5.2.2",
-		"vitest": "^0.34.6"
+		"@types/node": "^20.0.0",
+		"typescript": "^5.0.0",
+		"vitest": "^0.34.0"
 	},
 	"dependencies": {
-		"@fastify/static": "^6.12.0",
-		"@rollup/plugin-commonjs": "^25.0.7",
-		"@rollup/plugin-json": "^6.0.1",
-		"@rollup/plugin-node-resolve": "^15.2.3",
-		"fastify": "^4.24.3",
-		"fastify-plugin": "^4.5.1",
-		"rollup": "^4.3.0",
-		"rollup-plugin-dts": "6.1.0",
-		"rollup-plugin-esbuild": "6.1.0"
+		"@fastify/static": "^6.0.0",
+		"fastify": "^4.0.3",
+		"fastify-plugin": "^4.0.0",
+		"rollup": "^4.0.0",
+		"rollup-plugin-dts": "^6.0.0",
+		"rollup-plugin-esbuild": "^6.0.0"
 	},
 	"peerDependencies": {
 		"@sveltejs/kit": "^1.0.0"
