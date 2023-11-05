@@ -1,3 +1,5 @@
+/// <reference types="@sveltejs/kit/src/exports/public.d.ts" />
+
 declare module 'ENV' {
 	export function env(key: string, fallback?: any): string;
 }

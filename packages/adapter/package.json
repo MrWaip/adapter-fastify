@@ -19,17 +19,13 @@
 	},
 	"types": "index.d.ts",
 	"files": [
-		"files",
-		"index.js",
-		"index.d.ts"
+		"dist"
 	],
 	"scripts": {
-		"dev": "node -e \"fs.rmSync('files', { force: true, recursive: true })\" && rollup -cw",
 		"build": "node -e \"fs.rmSync('files', { force: true, recursive: true })\" && rollup -c",
 		"check": "tsc",
 		"lint": "prettier --check . --config ../../.prettierrc --ignore-path .gitignore",
-		"format": "pnpm lint --write",
-		"prepublishOnly": "pnpm build"
+		"lint:fix": "pnpm lint --write"
 	},
 	"devDependencies": {
 		"@playwright/test": "^1.39.0",

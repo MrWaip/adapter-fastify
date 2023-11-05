@@ -7,6 +7,7 @@ import { Server } from 'SERVER';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { Readable } from 'node:stream';
+import type { Response } from 'undici';
 
 import { getRequest } from '@sveltejs/kit/node';
 import serveStaticPlugin from '@fastify/static';
@@ -85,10 +86,10 @@ export const plugin = fp(async (instance) => {
 			return res.send('Invalid request body');
 		}
 
-		const fetchLikeResponse = await server.respond(request, {
+		const fetchLikeResponse = (await server.respond(request, {
 			platform: { req: req.raw },
 			getClientAddress: () => req.ip,
-		});
+		})) as Response;
 
 		res.status(fetchLikeResponse.status);
 		res.headers(Object.fromEntries(fetchLikeResponse.headers));

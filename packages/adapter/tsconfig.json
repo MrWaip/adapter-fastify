@@ -12,7 +12,7 @@
 		"target": "ESNext",
 		"baseUrl": ".",
 		"skipLibCheck": true,
-		"lib": ["ESNext.AsyncIterable"]
+		"lib": ["ESNext.AsyncIterable", "ESNext"]
 	},
 	"include": ["src", "ambient.d.ts", "global.d.ts", "rollup.config.js"],
 	"exclude": ["node_modules", "dist"]

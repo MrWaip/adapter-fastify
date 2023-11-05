@@ -4,11 +4,14 @@
   "type": "module",
   "private": true,
   "scripts": {
-	"build": "pnpm -r --filter=./packages/* run build",
-	"check": "pnpm -r --filter=./packages/* run check",
-	"test": "pnpm -r --filter=./packages/* run test"
+    "build": "pnpm -r --filter=./packages/* run build",
+    "check": "pnpm -r --filter=./packages/* run check",
+    "lint": "pnpm -r --filter=./packages/* run lint",
+    "lint:fix": "pnpm -r --filter=./packages/* run lint:fix",
+    "test": "pnpm -r --filter=./packages/* run test"
   },
-  "devDependencies": {},
-  "dependencies": {},
-  "peerDependencies": {}
+  "devDependencies": {
+    "prettier": "^3.0.3",
+    "undici": "^5.27.2"
+  }
 }

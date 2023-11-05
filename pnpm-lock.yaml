@@ -7,50 +7,10 @@ settings:
 importers:
 
   .:
-    dependencies:
-      '@fastify/static':
-        specifier: ^6.12.0
-        version: 6.12.0
-      '@rollup/plugin-commonjs':
-        specifier: ^25.0.7
-        version: 25.0.7(rollup@4.3.0)
-      '@rollup/plugin-json':
-        specifier: ^6.0.1
-        version: 6.0.1(rollup@4.3.0)
-      '@rollup/plugin-node-resolve':
-        specifier: ^15.2.3
-        version: 15.2.3(rollup@4.3.0)
-      '@sveltejs/kit':
-        specifier: ^1.0.0
-        version: 1.27.3(svelte@4.2.2)(vite@4.5.0)
-      fastify:
-        specifier: ^4.24.3
-        version: 4.24.3
-      fastify-plugin:
-        specifier: ^4.5.1
-        version: 4.5.1
-      rollup:
-        specifier: ^4.3.0
-        version: 4.3.0
-      rollup-plugin-dts:
-        specifier: 6.1.0
-        version: 6.1.0(rollup@4.3.0)(typescript@5.2.2)
-      rollup-plugin-esbuild:
-        specifier: 6.1.0
-        version: 6.1.0(esbuild@0.19.5)(rollup@4.3.0)
     devDependencies:
-      '@playwright/test':
-        specifier: ^1.39.0
-        version: 1.39.0
-      '@types/node':
-        specifier: ^20.8.10
-        version: 20.8.10
-      typescript:
-        specifier: ^5.2.2
-        version: 5.2.2
-      vitest:
-        specifier: ^0.34.6
-        version: 0.34.6
+      prettier:
+        specifier: ^3.0.3
+        version: 3.0.3
 
   packages/adapter:
     dependencies:
@@ -1668,6 +1628,12 @@ packages:
       nanoid: 3.3.6
       picocolors: 1.0.0
       source-map-js: 1.0.2
+
+  /prettier@3.0.3:
+    resolution: {integrity: sha512-L/4pUDMxcNa8R/EthV08Zt42WBO4h1rarVtK0K+QJG0X187OLo7l699jWw0GKuwzkPQ//jMFA/8Xm6Fh3J/DAg==}
+    engines: {node: '>=14'}
+    hasBin: true
+    dev: true
 
   /pretty-format@29.7.0:
     resolution: {integrity: sha512-Pdlw/oPxN+aXdmM9R00JVC9WVFoCLTKJvDVLgmJ+qAffBMxsV85l/Lu7sNx4zSzPyoL2euImuEwHhOXdEgNFZQ==}
