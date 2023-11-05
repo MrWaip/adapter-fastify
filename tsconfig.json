@@ -1,0 +1,18 @@
+{
+	"compilerOptions": {
+		"strict": true,
+		"allowJs": true,
+		"checkJs": true,
+		"noEmit": true,
+		"noImplicitAny": true,
+		"allowSyntheticDefaultImports": true,
+		"moduleResolution": "node",
+		"module": "ESNext",
+		"target": "ESNext",
+		"baseUrl": ".",
+		"skipLibCheck": true,
+		"lib": ["ESNext.AsyncIterable"]
+	},
+	"include": ["src", "ambient.d.ts", "global.d.ts"],
+	"exclude": ["node_modules", "dist"]
+}
