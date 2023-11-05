@@ -11,6 +11,9 @@ importers:
       '@changesets/cli':
         specifier: ^2.26.0
         version: 2.26.2
+      '@mrwaip/adapter-fastify':
+        specifier: ^0.0.1-next.0
+        version: link:packages/adapter
       prettier:
         specifier: ^3.0.0
         version: 3.0.3

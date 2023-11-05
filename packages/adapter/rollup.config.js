@@ -37,7 +37,7 @@ export default [
 		input: 'src/index.ts',
 		external,
 		output: {
-			dir: 'dist/index.d.ts',
+			dir: 'dist',
 			format: 'esm',
 		},
 		plugins: [dts()],

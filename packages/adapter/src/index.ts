@@ -4,7 +4,16 @@ import { rollup } from 'rollup';
 import { nodeResolve } from '@rollup/plugin-node-resolve';
 import commonjs from '@rollup/plugin-commonjs';
 import json from '@rollup/plugin-json';
-import { AdapterFastify } from './types';
+import type { Adapter } from '@sveltejs/kit';
+
+type AdapterFastifyOptions = {
+	out?: string;
+	precompress?: boolean;
+	envPrefix?: string;
+	polyfill?: boolean;
+};
+
+type AdapterFastify = (opts?: AdapterFastifyOptions) => Adapter;
 
 const templates = fileURLToPath(new URL('./templates', import.meta.url).href);
 
